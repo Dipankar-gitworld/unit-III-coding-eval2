@@ -1,0 +1,24 @@
+#food-container{
+    display: grid;
+    grid-template-columns:repeat(4,25%);
+    padding: 5%;
+    row-gap: 20px;
+}
+img{
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+p{
+    text-align: center;
+}
+button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1{
+    padding-left: 5%;
+    margin-bottom: 0;
+}

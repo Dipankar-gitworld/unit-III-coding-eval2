@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/navbar_style.css">
+    <link rel="stylesheet" href="./styles/login.css">
+</head>
+<body>
+
+    <div id="navbar-container"></div>
+
+    <div id="login">
+        <h1>login</h1>
+        <form action="" id="login-form" onsubmit="login(event)">
+            <input type="text" name="username" id="username" placeholder="username">
+           
+            <input type="password" name="pasword" id="password" placeholder="password">
+            
+            
+            <button type="submit">sign up</button>
+
+
+        </form>
+    </div>
+
+    <div id="status"></div>
+    
+</body>
+</html>
+
+
+<script>
+
+    function login(e){
+        e.preventDefault();
+
+        let login_form=document.getElementById("login-form");
+
+        let data={
+            username : login_form.username.value,
+            password : login_form.password.value,
+           
+        }
+
+        data=JSON.stringify(data);
+
+        fetch("https://masai-api-mocker.herokuapp.com/auth/login",{
+           method : 'POST',
+           body :data,
+           headers :{
+               "Content-Type" : "application/json"
+
+           }
+       }).then((res)=>{
+           return res.json();
+       })
+       .then((res)=>{
+           console.log(res);
+           if(res.error==false){
+               document.getElementById("status").textContent="login Success";
+               document.getElementById("status").style.color="green";
+           }
+       })
+       .catch((e)=>{
+           document.getElementById("status").textContent="login Failed";
+            document.getElementById("status").style.color="red";
+
+       })
+       
+    }
+
+
+
+
+
+
+
+</script>
+
+<script type="module">
+
+    let navbar_div=document.getElementById("navbar-container");
+    import navbar from "./components/navbar.js";
+    navbar_div.innerHTML=navbar();
+
+
+
+
+
+
+</script>

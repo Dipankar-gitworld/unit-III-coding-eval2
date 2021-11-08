@@ -1,0 +1,20 @@
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+    border: 1px solid black;
+    
+}
+#navbar a{
+    text-decoration: none;
+}
+#navbar >div{
+    display: flex;
+    gap: 30px;
+}
+h1{
+    text-align: center;
+    margin-top: 0;
+    background-color: azure;
+}

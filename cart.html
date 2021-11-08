@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/navbar_style.css">
+    <link rel="stylesheet" href="./styles/cart.css">
+</head>
+<body>
+
+    <div id="navbar-container"></div>
+    <h1>cart items</h1>
+    <div>
+        <button onclick="order()">place order</button>
+    </div>
+    <div id="food-container"></div>
+    
+</body>
+</html>
+
+<script>
+
+    let food_div=document.getElementById("food-container");
+
+    let cart_items=JSON.parse(localStorage.getItem("cart"));
+    cart_items.forEach((el)=>{
+        let div1=document.createElement("div");
+        let img1=document.createElement("img");
+        let p1=document.createElement("p");
+        let p2=document.createElement("p");
+
+        img1.src=el.img;
+        p1.textContent=el.name;
+        p2.textContent=el.price;
+
+        div1.append(img1,p1,p2);
+        food_div.append(div1);
+    })
+
+    function order(){
+
+        cart_items=[];
+        localStorage.setItem("cart",JSON.stringify(cart_items));
+
+        alert(" Your order is accepted");
+
+        setTimeout(()=>{
+            alert("Your order is being cooked");
+        },3000);
+
+        setTimeout(()=>{
+            alert(" Your order is ready");
+        },8000);
+
+        setTimeout(()=>{
+            alert("Order out for delivery");
+        },10000);
+
+        setTimeout(()=>{
+            alert(" Order delivered");
+        },12000);
+
+
+
+    }
+
+
+
+
+
+
+</script>
+
+
+<script type="module">
+
+    let navbar_div=document.getElementById("navbar-container");
+    import navbar from "./components/navbar.js";
+    navbar_div.innerHTML=navbar();
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+</script>

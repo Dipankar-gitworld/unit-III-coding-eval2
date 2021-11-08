@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/navbar_style.css">
+    <link rel="stylesheet" href="./styles/menu.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <h1>Order Foods</h1>
+
+    <div id="food-container"></div>
+    
+</body>
+</html>
+
+<script>
+
+    let food_div=document.getElementById("food-container");
+
+    fetch("https://www.themealdb.com/api/json/v1/1/random.php").then((res)=>{
+        return res.json();
+    })
+    .then((res)=>{
+        console.log(res.meals[0]);
+        let div1=document.createElement("div");
+        let img1=document.createElement("img");
+        let p1=document.createElement("p");
+        
+        img1.src=res.meals[0].strMealThumb;
+        p1.textContent=res.meals[0].strMeal;
+        let p2=document.createElement("p");
+        p2.textContent="price -"+(Math.floor(Math.random()*500+100));
+
+        let btn=document.createElement("button");
+        btn.textContent="add to cart";
+        btn.onclick=()=>{
+            if(localStorage.getItem("cart")===null){
+                localStorage.setItem("cart",JSON.stringify([]));
+            }
+
+            let cart=JSON.parse(localStorage.getItem("cart"));
+            let cart_object={
+                img:res.meals[0].strMealThumb,
+                name:res.meals[0].strMeal,
+                price:p2.textContent
+            }
+
+            cart.push(cart_object);
+            localStorage.setItem("cart",JSON.stringify(cart));
+            
+        }
+
+        div1.append(img1,p1,p2,btn);
+        food_div.append(div1);
+
+    })
+    fetch("https://www.themealdb.com/api/json/v1/1/random.php").then((res)=>{
+        return res.json();
+    })
+    .then((res)=>{
+        console.log(res.meals[0]);
+        let div1=document.createElement("div");
+        let img1=document.createElement("img");
+        let p1=document.createElement("p");
+        img1.src=res.meals[0].strMealThumb;
+        p1.textContent=res.meals[0].strMeal;
+        let p2=document.createElement("p");
+        p2.textContent="price -"+(Math.floor(Math.random()*500+100));
+
+        let btn=document.createElement("button");
+        btn.textContent="add to cart";
+        btn.onclick=()=>{
+            if(localStorage.getItem("cart")===null){
+                localStorage.setItem("cart",JSON.stringify([]));
+            }
+
+            let cart=JSON.parse(localStorage.getItem("cart"));
+            let cart_object={
+                img:res.meals[0].strMealThumb,
+                name:res.meals[0].strMeal,
+                price:p2.textContent
+            }
+
+            cart.push(cart_object);
+            localStorage.setItem("cart",JSON.stringify(cart));
+            
+        }
+
+        div1.append(img1,p1,p2,btn);
+        food_div.append(div1);
+
+    })
+    fetch("https://www.themealdb.com/api/json/v1/1/random.php").then((res)=>{
+        return res.json();
+    })
+    .then((res)=>{
+        console.log(res.meals[0]);
+        let div1=document.createElement("div");
+        let img1=document.createElement("img");
+        let p1=document.createElement("p");
+        img1.src=res.meals[0].strMealThumb;
+        p1.textContent=res.meals[0].strMeal;
+        let p2=document.createElement("p");
+        p2.textContent="price -"+(Math.floor(Math.random()*500+100));
+
+        let btn=document.createElement("button");
+        btn.textContent="add to cart";
+        btn.onclick=()=>{
+            if(localStorage.getItem("cart")===null){
+                localStorage.setItem("cart",JSON.stringify([]));
+            }
+
+            let cart=JSON.parse(localStorage.getItem("cart"));
+            let cart_object={
+                img:res.meals[0].strMealThumb,
+                name:res.meals[0].strMeal,
+                price:p2.textContent
+            }
+
+            cart.push(cart_object);
+            localStorage.setItem("cart",JSON.stringify(cart));
+            
+        }
+
+        div1.append(img1,p1,p2,btn);
+        food_div.append(div1);
+
+    })
+    fetch("https://www.themealdb.com/api/json/v1/1/random.php").then((res)=>{
+        return res.json();
+    })
+    .then((res)=>{
+        console.log(res.meals[0]);
+        let div1=document.createElement("div");
+        let img1=document.createElement("img");
+        let p1=document.createElement("p");
+        img1.src=res.meals[0].strMealThumb;
+        p1.textContent=res.meals[0].strMeal;
+        let p2=document.createElement("p");
+        p2.textContent="price -"+(Math.floor(Math.random()*500+100));
+
+        let btn=document.createElement("button");
+        btn.textContent="add to cart";
+        btn.onclick=()=>{
+            if(localStorage.getItem("cart")===null){
+                localStorage.setItem("cart",JSON.stringify([]));
+            }
+
+            let cart=JSON.parse(localStorage.getItem("cart"));
+            let cart_object={
+                img:res.meals[0].strMealThumb,
+                name:res.meals[0].strMeal,
+                price:p2.textContent
+            }
+
+            cart.push(cart_object);
+            localStorage.setItem("cart",JSON.stringify(cart));
+            
+        }
+
+        div1.append(img1,p1,p2,btn);
+        food_div.append(div1);
+
+    })
+    fetch("https://www.themealdb.com/api/json/v1/1/random.php").then((res)=>{
+        return res.json();
+    })
+    .then((res)=>{
+        console.log(res.meals[0]);
+        let div1=document.createElement("div");
+        let img1=document.createElement("img");
+        let p1=document.createElement("p");
+        img1.src=res.meals[0].strMealThumb;
+        p1.textContent=res.meals[0].strMeal;
+        let p2=document.createElement("p");
+        p2.textContent="price -"+(Math.floor(Math.random()*500+100));
+
+        let btn=document.createElement("button");
+        btn.textContent="add to cart";
+        btn.onclick=()=>{
+            if(localStorage.getItem("cart")===null){
+                localStorage.setItem("cart",JSON.stringify([]));
+            }
+
+            let cart=JSON.parse(localStorage.getItem("cart"));
+            let cart_object={
+                img:res.meals[0].strMealThumb,
+                name:res.meals[0].strMeal,
+                price:p2.textContent
+            }
+
+            cart.push(cart_object);
+            localStorage.setItem("cart",JSON.stringify(cart));
+            
+        }
+
+        div1.append(img1,p1,p2,btn);
+        food_div.append(div1);
+
+    })
+    fetch("https://www.themealdb.com/api/json/v1/1/random.php").then((res)=>{
+        return res.json();
+    })
+    .then((res)=>{
+        console.log(res.meals[0]);
+        let div1=document.createElement("div");
+        let img1=document.createElement("img");
+        let p1=document.createElement("p");
+        img1.src=res.meals[0].strMealThumb;
+        p1.textContent=res.meals[0].strMeal;
+        let p2=document.createElement("p");
+        p2.textContent="price -"+(Math.floor(Math.random()*500+100));
+
+        let btn=document.createElement("button");
+        btn.textContent="add to cart";
+        btn.onclick=()=>{
+            if(localStorage.getItem("cart")===null){
+                localStorage.setItem("cart",JSON.stringify([]));
+            }
+
+            let cart=JSON.parse(localStorage.getItem("cart"));
+            let cart_object={
+                img:res.meals[0].strMealThumb,
+                name:res.meals[0].strMeal,
+                price:p2.textContent
+            }
+
+            cart.push(cart_object);
+            localStorage.setItem("cart",JSON.stringify(cart));
+            
+        }
+
+        div1.append(img1,p1,p2,btn);
+        food_div.append(div1);
+
+    })
+    fetch("https://www.themealdb.com/api/json/v1/1/random.php").then((res)=>{
+        return res.json();
+    })
+    .then((res)=>{
+        console.log(res.meals[0]);
+        let div1=document.createElement("div");
+        let img1=document.createElement("img");
+        let p1=document.createElement("p");
+        img1.src=res.meals[0].strMealThumb;
+        p1.textContent=res.meals[0].strMeal;
+        let p2=document.createElement("p");
+        p2.textContent="price -"+(Math.floor(Math.random()*500+100));
+
+        let btn=document.createElement("button");
+        btn.textContent="add to cart";
+        btn.onclick=()=>{
+            if(localStorage.getItem("cart")===null){
+                localStorage.setItem("cart",JSON.stringify([]));
+            }
+
+            let cart=JSON.parse(localStorage.getItem("cart"));
+            let cart_object={
+                img:res.meals[0].strMealThumb,
+                name:res.meals[0].strMeal,
+                price:p2.textContent
+            }
+
+            cart.push(cart_object);
+            localStorage.setItem("cart",JSON.stringify(cart));
+            
+        }
+
+        div1.append(img1,p1,p2,btn);
+        food_div.append(div1);
+
+    })
+    fetch("https://www.themealdb.com/api/json/v1/1/random.php").then((res)=>{
+        return res.json();
+    })
+    .then((res)=>{
+        console.log(res.meals[0]);
+        let div1=document.createElement("div");
+        let img1=document.createElement("img");
+        let p1=document.createElement("p");
+        img1.src=res.meals[0].strMealThumb;
+        p1.textContent=res.meals[0].strMeal;
+        let p2=document.createElement("p");
+        p2.textContent="price -"+(Math.floor(Math.random()*500+100));
+
+        let btn=document.createElement("button");
+        btn.textContent="add to cart";
+        btn.onclick=()=>{
+            if(localStorage.getItem("cart")===null){
+                localStorage.setItem("cart",JSON.stringify([]));
+            }
+
+            let cart=JSON.parse(localStorage.getItem("cart"));
+            let cart_object={
+                img:res.meals[0].strMealThumb,
+                name:res.meals[0].strMeal,
+                price:p2.textContent
+            }
+
+            cart.push(cart_object);
+            localStorage.setItem("cart",JSON.stringify(cart));
+            
+        }
+
+        div1.append(img1,p1,p2,btn);
+        food_div.append(div1);
+
+    })
+    fetch("https://www.themealdb.com/api/json/v1/1/random.php").then((res)=>{
+        return res.json();
+    })
+    .then((res)=>{
+        console.log(res.meals[0]);
+        let div1=document.createElement("div");
+        let img1=document.createElement("img");
+        let p1=document.createElement("p");
+        img1.src=res.meals[0].strMealThumb;
+        p1.textContent=res.meals[0].strMeal;
+        let p2=document.createElement("p");
+        p2.textContent="price -"+(Math.floor(Math.random()*500+100));
+
+        let btn=document.createElement("button");
+        btn.textContent="add to cart";
+        btn.onclick=()=>{
+            if(localStorage.getItem("cart")===null){
+                localStorage.setItem("cart",JSON.stringify([]));
+            }
+
+            let cart=JSON.parse(localStorage.getItem("cart"));
+            let cart_object={
+                img:res.meals[0].strMealThumb,
+                name:res.meals[0].strMeal,
+                price:p2.textContent
+            }
+
+            cart.push(cart_object);
+            localStorage.setItem("cart",JSON.stringify(cart));
+            
+        }
+
+        div1.append(img1,p1,p2,btn);
+        food_div.append(div1);
+
+    })
+    fetch("https://www.themealdb.com/api/json/v1/1/random.php").then((res)=>{
+        return res.json();
+    })
+    .then((res)=>{
+        console.log(res.meals[0]);
+        let div1=document.createElement("div");
+        let img1=document.createElement("img");
+        let p1=document.createElement("p");
+        img1.src=res.meals[0].strMealThumb;
+        p1.textContent=res.meals[0].strMeal;
+        let p2=document.createElement("p");
+        p2.textContent="price -"+(Math.floor(Math.random()*500+100));
+
+        let btn=document.createElement("button");
+        btn.textContent="add to cart";
+        btn.onclick=()=>{
+            if(localStorage.getItem("cart")===null){
+                localStorage.setItem("cart",JSON.stringify([]));
+            }
+
+            let cart=JSON.parse(localStorage.getItem("cart"));
+            let cart_object={
+                img:res.meals[0].strMealThumb,
+                name:res.meals[0].strMeal,
+                price:p2.textContent
+            }
+
+            cart.push(cart_object);
+            localStorage.setItem("cart",JSON.stringify(cart));
+            
+        }
+
+        div1.append(img1,p1,p2,btn);
+        food_div.append(div1);
+
+    })
+    fetch("https://www.themealdb.com/api/json/v1/1/random.php").then((res)=>{
+        return res.json();
+    })
+    .then((res)=>{
+        console.log(res.meals[0]);
+        let div1=document.createElement("div");
+        let img1=document.createElement("img");
+        let p1=document.createElement("p");
+        img1.src=res.meals[0].strMealThumb;
+        p1.textContent=res.meals[0].strMeal;
+        let p2=document.createElement("p");
+        p2.textContent="price -"+(Math.floor(Math.random()*500+100));
+
+        let btn=document.createElement("button");
+        btn.textContent="add to cart";
+        btn.onclick=()=>{
+            if(localStorage.getItem("cart")===null){
+                localStorage.setItem("cart",JSON.stringify([]));
+            }
+
+            let cart=JSON.parse(localStorage.getItem("cart"));
+            let cart_object={
+                img:res.meals[0].strMealThumb,
+                name:res.meals[0].strMeal,
+                price:p2.textContent
+            }
+
+            cart.push(cart_object);
+            localStorage.setItem("cart",JSON.stringify(cart));
+            
+        }
+
+        div1.append(img1,p1,p2,btn);
+        food_div.append(div1);
+
+    })
+    fetch("https://www.themealdb.com/api/json/v1/1/random.php").then((res)=>{
+        return res.json();
+    })
+    .then((res)=>{
+        console.log(res.meals[0]);
+        let div1=document.createElement("div");
+        let img1=document.createElement("img");
+        let p1=document.createElement("p");
+        img1.src=res.meals[0].strMealThumb;
+        p1.textContent=res.meals[0].strMeal;
+        let p2=document.createElement("p");
+        p2.textContent="price -"+(Math.floor(Math.random()*500+100));
+
+        let btn=document.createElement("button");
+        btn.textContent="add to cart";
+        btn.onclick=()=>{
+            if(localStorage.getItem("cart")===null){
+                localStorage.setItem("cart",JSON.stringify([]));
+            }
+
+            let cart=JSON.parse(localStorage.getItem("cart"));
+            let cart_object={
+                img:res.meals[0].strMealThumb,
+                name:res.meals[0].strMeal,
+                price:p2.textContent
+            }
+
+            cart.push(cart_object);
+            localStorage.setItem("cart",JSON.stringify(cart));
+            
+        }
+
+        div1.append(img1,p1,p2,btn);
+        food_div.append(div1);
+
+    })
+
+</script>
+
+<script type="module">
+
+    let navbar_div=document.getElementById("navbar-container");
+    import navbar from "./components/navbar.js";
+    navbar_div.innerHTML=navbar();
+
+    
+
+
+
+
+</script>
